@@ -1,12 +1,14 @@
 
 import reflex as rx
-from data import companies
-from app import company_card
+from .data import companies
+from .app import company_card
+
+
 
 def homepage() -> rx.Component:
     return rx.box(
-        rx.heading("Startup Evaluator", size="xl", mb=4),
-        rx.vbox(
+        rx.heading("Startup Evaluator", size="xl", mb="4"),
+        rx.box(
             *[
                 company_card(
                     logo=company["logo"],
@@ -17,9 +19,9 @@ def homepage() -> rx.Component:
                 )
                 for company in companies
             ],
-            spacing=4
+            spacing="4"
         ),
-        padding=4
+        padding="4"
     )
 
 app = rx.App()
