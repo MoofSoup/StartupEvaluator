@@ -2,7 +2,7 @@
 
 Company = {
     "name": "KAEDIM",
-    "logo": "path/to/kaedim_logo.png",  # Update with the actual path to the logo image
+    "logo": "https://media.licdn.com/dms/image/v2/D4E0BAQHrpHldZTic1Q/company-logo_200_200/company-logo_200_200/0/1726572966297/kaedim_logo?e=1739404800&v=beta&t=sb8tX6kups9fmiDTkUezWhY-xefX1-yK42XHFPXP2i4",  # Update with the actual path to the logo image
     "solution": "An AI-powered platform that automatically generates 3D models from 2D images.",
     "tags": ["AI", "3D Modeling", "Computer Vision"],
     "profile": {
