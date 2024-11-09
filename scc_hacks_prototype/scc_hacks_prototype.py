@@ -1,6 +1,7 @@
 
 import reflex as rx
 from data import companies
+from app import company_card
 
 def homepage() -> rx.Component:
     return rx.box(
