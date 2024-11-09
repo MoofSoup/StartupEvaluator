@@ -12,30 +12,34 @@ def tag(text: str, color: str = "gray") -> rx.Component:
     )
 
 def company_card(
-    logo: str,
+    logo_url: str,
     name: str,
-    solution: str,
-    tags: list[str],
-    open_roles: list[str],
+    pitch: str,
 ) -> rx.Component:
     return rx.link(
         rx.box(
             rx.hstack(
-                rx.image(src=logo, box_size="50px"),
-                rx.box(
-                    rx.heading(name, size="md"),
-                    rx.text(solution, font_size="sm"),
+                rx.image(
+                    src=logo_url,
+                    box_size="50px",  # Controls both width and height
+                    fit="contain",    # Maintains aspect ratio
+                    max_width="50px", # Additional size constraints
+                    max_height="50px",
+                    border_radius="md", # Optional: rounds the corners
+                ),
+                rx.vstack(
+                    rx.heading(name, size="md",),
+                    rx.text(pitch, font_size="sm"),
                     align_items="flex_start",
                 ),
-                spacing="4",
+                spacing='4',
             ),
-            padding="4",
-            border_width="1",
-            border_radius="15px",  # Set border radius to 15px
-            border_color="white",  # Set border color to white
-            background="white",    # Set the background color to white
+            padding=4,
+            border_width=1,
+            border_radius="md",
+            border_color="gray.200",
             _hover={"shadow": "md"},
-            width="1000px",         # Set a static width for the card
+            width="100%",
         ),
-        href="/tabs"  # Link to the route defined in tabs_page.py
+        href=f"/company/{name.lower().replace(' ', '_')}"
     )
