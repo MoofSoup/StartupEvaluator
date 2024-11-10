@@ -1,4 +1,9 @@
-#Getting started
+# Getting started
+
+REFLEX requires Python 3.8 or higher
+```
+python3 --version
+```
 
 Optional Setup virtual machine
 ```
