@@ -76,7 +76,7 @@ def tabs_function() -> rx.Component:
                         font_weight=rx.cond(TabState.active_tab == "Red Flags", "bold", "normal"),
                         on_click=TabState.set_tab("Red Flags")
                     ),
-                    spacing="20px"
+                    spacing="5"
                 ),
                 display_tab_content(),
                 padding="20px",
