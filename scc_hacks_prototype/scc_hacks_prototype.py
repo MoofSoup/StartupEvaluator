@@ -7,7 +7,7 @@ from .app import company_card
 
 def homepage() -> rx.Component:
     return rx.box(
-        rx.heading("Startup Evaluator", size="xl", mb="4"),
+        rx.heading("Startup Evaluator", size="4", mb="4"),
         rx.box(
             *[
                 company_card(

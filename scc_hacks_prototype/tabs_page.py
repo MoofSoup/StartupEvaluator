@@ -17,7 +17,7 @@ def tabs_function() -> rx.Component:
         return rx.cond(
             TabState.active_tab == "Profile",
             rx.box(
-                rx.heading("Company Profile", size="md", margin_bottom="10px"),
+                rx.heading("Company Profile", size="4", mb="5"),
                 rx.text("Problem Summary:", font_weight="bold"),
                 rx.text(Company['profile']['problem_summary']['What specific problem is Kaedim trying to solve?']),
                 rx.text("Current Solutions:", font_weight="bold"),
@@ -34,7 +34,7 @@ def tabs_function() -> rx.Component:
             rx.cond(
                 TabState.active_tab == "Jobs",
                 rx.box(
-                    rx.heading("Job Opportunities", size="md", margin_bottom="10px", color="black"),
+                    rx.heading("Job Opportunities", size="3", mb="4", color="black"),
                     *[rx.text(f"- {role}") for role in Company['open_roles']],
                     margin_top="10px"
                 ),
@@ -47,7 +47,7 @@ def tabs_function() -> rx.Component:
     return rx.box(
         rx.center(
             rx.vstack(
-                rx.heading(Company["name"], size="lg", color="black"),
+                rx.heading(Company["name"], size="3", color="black"),
                 rx.hstack(
                     rx.text(
                         "Profile",
@@ -76,7 +76,7 @@ def tabs_function() -> rx.Component:
                         font_weight=rx.cond(TabState.active_tab == "Red Flags", "bold", "normal"),
                         on_click=TabState.set_tab("Red Flags")
                     ),
-                    spacing="20px"
+                    spacing="5"
                 ),
                 display_tab_content(),
                 padding="20px",
